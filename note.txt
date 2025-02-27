@@ -1,0 +1,75 @@
+7.4 POSITIONS
+At the moment the ball is hit by the server, each team must be positioned 
+within its own court (except the server). The players of the receiving 
+team must be in the rotational order at the service hit.
+The players of the serving team, however, are free to occupy any 
+position at the service hit.
+
+7.4.1 The positions of the players are numbered as follows:
+7.4.1.1 the three players along the net are front-row players and occupy 
+positions 4 (front-left), 3 (front-centre) and 2 (front-right);
+7.4.1.2 the other three are back-row players occupying positions 5 (back-left), 6 
+(back-centre) and 1 (back-right).
+7.4.2 Relative positions between players:
+7.4.2.1 each back-row player must be positioned further back from the centre 
+line than the corresponding front-row player;
+7.4.2.2 the front-row players and the back-row players, respectively, must be 
+positioned laterally in the order indicated in Rule 7.4.1.
+7.4.3 The positions of players are determined and controlled according to the 
+positions of their feet contacting the ground (the last contact with the 
+floor fixes the player’s position), as follows:
+
+7.4.3.1 each back-row player must be level with or have at least a part of one 
+foot further from the centre line than the front foot of the corresponding 
+front-row player;
+
+
+7.4.3.2 each right (left) side player must be level with or have at least a part of 
+one foot closer to the right (left) sideline than the foot further from the 
+right (left) side line of the other players in that row.
+
+7.4.4 After the service hit, the players of both teams may move around and 
+occupy any position on their court and the free zone.
+
+7.5 POSITIONAL FAULT
+7.5.1 The team commits a positional fault, if any player is not in his/her correct 
+position at the moment the ball is hit by the server. When a player is on 
+court through illegal substitution, and play restarts, this is counted as a 
+positional fault with the consequences of an illegal substitution.
+
+7.5.2 If the server commits a serving fault at the moment of the service hit, 
+the server's fault is counted before a positional fault.
+
+7.5.3 If the service becomes faulty after the service hit, it is the positional fault 
+that will be counted.
+
+
+7.5.4 A positional fault leads to the following consequences: 
+7.5.4.1 the team is sanctioned with a point and service to the opponent;
+7.5.4.2 players' positions must be rectified. 
+
+7.6 ROTATION
+7.6.1 The rotational order is determined by the team's starting line-up and 
+controlled with the service order and players' positions throughout the 
+set.
+
+7.6.2 When the receiving team has gained the right to serve, its players rotate 
+one position clock-wise: the player in position 2 rotates to position 1 to 
+serve, the player in position 1 rotates to position 6, etc.
+
+7.7 ROTATIONAL FAULT D11 (13)
+7.7.1 A rotational fault is committed when the SERVICE is not made according 
+to the rotational order. It leads to the following consequences in order:
+
+7.7.1.1 the scorer stops play by the buzzer; the opponent gains a point and 
+next service; 
+If the rotational fault is determined only after the completion of the rally 
+which started with a rotational fault, only a single point is awarded to 
+the opponent, regardless of the result of the rally played.
+
+7.7.1.2 the rotational order of the faulty team must be rectified; 7.6.1
+7.7.2 Additionally, the scorer should determine the exact moment when the 
+fault was committed, and all points scored subsequently by the team at 
+fault must be cancelled. The opponent's points remain valid.
+If that moment cannot be determined, no point(s) cancellation takes 
+place, and a point and service to the opponent is the only sanction.

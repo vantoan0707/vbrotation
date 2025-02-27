@@ -36,8 +36,8 @@ function drawCourt() {
     ctx.beginPath();
     ctx.moveTo(0, centerLine);
     ctx.lineTo(courtWidth, centerLine);
-    ctx.strokeStyle = '#666';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#fff'; // Set the color to white
+    ctx.lineWidth = 3;
     ctx.stroke();
 }
 
