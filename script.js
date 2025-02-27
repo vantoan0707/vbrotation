@@ -21,14 +21,8 @@ let players = [
     { x: 6 * metersToPixelsX, y: 7 * metersToPixelsY, label: 'Setter', pos: 1 }
 ];
 
-const positionOrder = [
-    { x: 6 * metersToPixelsX, y: 7 * metersToPixelsY, pos: 1 },   // Back right
-    { x: 4.5 * metersToPixelsX, y: 7 * metersToPixelsY, pos: 6 }, // Back center
-    { x: 3 * metersToPixelsX, y: 7 * metersToPixelsY, pos: 5 },   // Back left
-    { x: 3 * metersToPixelsX, y: 2 * metersToPixelsY, pos: 4 },   // Front left
-    { x: 4.5 * metersToPixelsX, y: 2 * metersToPixelsY, pos: 3 }, // Front center
-    { x: 6 * metersToPixelsX, y: 2 * metersToPixelsY, pos: 2 }    // Front right
-];
+let initialPositions = players.map(p => ({ x: p.x, y: p.y, label: p.label, pos: p.pos })); // Store initial positions
+let rotatedPositions = players.map(p => ({ x: p.x, y: p.y, label: p.label, pos: p.pos })); // Store positions after rotation
 
 function drawCourt() {
     ctx.clearRect(0, 0, courtWidth, courtHeight);
@@ -37,7 +31,7 @@ function drawCourt() {
     ctx.moveTo(0, centerLine);
     ctx.lineTo(courtWidth, centerLine);
     ctx.strokeStyle = '#fff'; // Set the color to white
-    ctx.lineWidth = 3;
+    ctx.lineWidth = 5;
     ctx.stroke();
 }
 
@@ -90,10 +84,53 @@ function rotate() {
                 player.y = startPositions[prevIndex].y;
                 player.pos = startPositions[prevIndex].pos;
             });
+            rotatedPositions = players.map(p => ({ x: p.x, y: p.y, label: p.label, pos: p.pos })); // Store the new positions
         }
     }
 
     requestAnimationFrame(animate);
+}
+
+function animateReorganize() {
+    const duration = 1000; // Animation duration in ms (1 second)
+    const startTime = performance.now();
+    const startPositions = players.map(p => ({ x: p.x, y: p.y, pos: p.pos })); // Capture current positions
+
+    function animate(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1); // 0 to 1
+
+        // Interpolate positions
+        players.forEach((player, index) => {
+            const startX = startPositions[index].x;
+            const startY = startPositions[index].y;
+            const endX = rotatedPositions[index].x;
+            const endY = rotatedPositions[index].y;
+
+            player.x = startX + (endX - startX) * progress;
+            player.y = startY + (endY - startY) * progress;
+        });
+
+        drawCourt();
+        drawPlayers();
+
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        } else {
+            // Ensure final positions are set
+            players.forEach((player, index) => {
+                player.x = rotatedPositions[index].x;
+                player.y = rotatedPositions[index].y;
+                player.pos = rotatedPositions[index].pos;
+            });
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+
+function reorganize() {
+    animateReorganize();
 }
 
 function updateName(index, newName) {
@@ -176,6 +213,23 @@ canvas.addEventListener('mouseup', () => {
         }
         selectedPlayer = null;
     }
+});
+
+canvas.addEventListener('dblclick', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    players.forEach((player, index) => {
+        const dx = mouseX - player.x;
+        const dy = mouseY - player.y;
+        if (Math.sqrt(dx * dx + dy * dy) < playerRadius) {
+            const newName = prompt("Enter new name for the player:", player.label);
+            if (newName) {
+                updateName(index, newName);
+            }
+        }
+    });
 });
 
 // Initial draw

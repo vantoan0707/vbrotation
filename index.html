@@ -8,18 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Volleyball Rotation</h1>
-        <canvas id="court" width="600" height="400"></canvas>
-        <button onclick="rotate()">Rotate</button>
-        <p>Drag players (Front-row can move back but must stay above back-row pairs)!</p>
-        <div id="player-inputs">
-            <h3>Edit Player Names</h3>
-            <div><label>Player 1 (Pos 2): </label><input id="p1" value="OH1" onchange="updateName(0, this.value)"></div>
-            <div><label>Player 2 (Pos 3): </label><input id="p2" value="MB1" onchange="updateName(1, this.value)"></div>
-            <div><label>Player 3 (Pos 4): </label><input id="p3" value="OP" onchange="updateName(2, this.value)"></div>
-            <div><label>Player 4 (Pos 5): </label><input id="p4" value="OH2" onchange="updateName(3, this.value)"></div>
-            <div><label>Player 5 (Pos 6): </label><input id="p5" value="MB2" onchange="updateName(4, this.value)"></div>
-            <div><label>Player 6 (Pos 1): </label><input id="p6" value="Setter" onchange="updateName(5, this.value)"></div>        </div>
+        <h1 style="color: white;">Volleyball Rotation</h1>
+        <canvas id="court" width="720" height="480"></canvas>
+        <button onclick="rotate()" style="color: black;">Rotate</button>
+        <button onclick="reorganize()" style="color: black;">Reorganize</button>
+        <p style="color: white;">Drag players (Front-row can move back but must stay above back-row pairs)!</p>
     </div>
     <script src="script.js"></script>
 </body>
